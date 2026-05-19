@@ -1,0 +1,167 @@
+export const personalInfo = {
+  name: "Alex Rivera",
+  title: "Full-Stack Developer & UI Engineer",
+  tagline: "I craft beautiful, performant web experiences that users love.",
+  bio: `I'm a passionate full-stack developer with 5+ years of experience building scalable web applications. I specialize in React, Next.js, and Node.js, with a strong eye for design and user experience. When I'm not coding, you'll find me contributing to open source, writing technical articles, or exploring the latest in web technology.`,
+  bioExtended: `My journey started with a curiosity for how things work on the internet. That curiosity turned into a career where I've had the privilege of working with startups and established companies alike, shipping products used by millions of people. I believe great software is built at the intersection of technical excellence and thoughtful design.`,
+  email: "alex@alexrivera.dev",
+  location: "San Francisco, CA",
+  availability: "Open to opportunities",
+  resumeUrl: "/resume.pdf",
+  social: {
+    github: "https://github.com/alexrivera",
+    linkedin: "https://linkedin.com/in/alexrivera",
+    twitter: "https://twitter.com/alexrivera",
+  },
+};
+
+export const skills = [
+  {
+    category: "Frontend",
+    icon: "Layout",
+    items: [
+      { name: "React / Next.js", level: 95 },
+      { name: "TypeScript", level: 90 },
+      { name: "Tailwind CSS", level: 92 },
+      { name: "Framer Motion", level: 80 },
+      { name: "GraphQL", level: 75 },
+    ],
+  },
+  {
+    category: "Backend",
+    icon: "Terminal",
+    items: [
+      { name: "Node.js", level: 88 },
+      { name: "PostgreSQL", level: 82 },
+      { name: "Redis", level: 70 },
+      { name: "REST APIs", level: 92 },
+      { name: "Prisma ORM", level: 85 },
+    ],
+  },
+  {
+    category: "DevOps & Tools",
+    icon: "GitBranch",
+    items: [
+      { name: "Docker", level: 78 },
+      { name: "AWS / Vercel", level: 80 },
+      { name: "Git & CI/CD", level: 90 },
+      { name: "Figma", level: 72 },
+      { name: "Testing (Jest/Vitest)", level: 83 },
+    ],
+  },
+];
+
+export const techBadges = [
+  "React", "Next.js", "TypeScript", "Node.js", "PostgreSQL",
+  "Tailwind CSS", "GraphQL", "Docker", "AWS", "Prisma",
+  "Redis", "Framer Motion", "Figma", "Git", "Vercel",
+];
+
+export const projects = [
+  {
+    slug: "saas-dashboard",
+    title: "SaaS Analytics Dashboard",
+    shortDesc: "A real-time analytics platform for SaaS businesses with beautiful data visualizations and team collaboration features.",
+    description: `A comprehensive analytics dashboard built for SaaS companies to track key metrics, visualize growth trends, and collaborate with team members in real time. The platform processes millions of events per day and presents them in an intuitive, customizable interface.`,
+    challenge: `The main challenge was handling real-time data streams efficiently while keeping the UI responsive. We needed to process and display millions of events without degrading the user experience.`,
+    solution: `Implemented a WebSocket-based event pipeline with Redis pub/sub for real-time updates. Used React Query for intelligent caching and optimistic updates, and virtualized long lists to maintain 60fps scrolling.`,
+    outcome: `Reduced dashboard load time by 70%, increased user engagement by 45%, and the platform now serves 500+ companies with 99.9% uptime.`,
+    image: "https://www.geckoboard.com/uploads/SaaS-dashboard-example.png",
+    screenshots: [
+      "/images/saas-dashboard-overview.jpg",
+      "/images/saas-dashboard-charts.jpg",
+      "/images/saas-dashboard-team.jpg",
+    ],
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "Recharts", "Prisma"],
+    liveUrl: "https://demo.saas-dashboard.dev",
+    githubUrl: "https://github.com/alexrivera/saas-dashboard",
+    featured: true,
+    year: "2024",
+    role: "Lead Developer",
+    duration: "4 months",
+  },
+  {
+    slug: "ai-writing-assistant",
+    title: "AI Writing Assistant",
+    shortDesc: "An intelligent writing tool powered by GPT-4 that helps users craft better content with real-time suggestions and style analysis.",
+    description: `A web-based writing assistant that leverages GPT-4 to provide contextual suggestions, grammar corrections, tone analysis, and style improvements. Supports multiple writing modes including blog posts, emails, and technical documentation.`,
+    challenge: `Streaming AI responses while maintaining a smooth editing experience was technically complex. We also needed to handle rate limiting gracefully and provide meaningful feedback when the AI was unavailable.`,
+    solution: `Used the Vercel AI SDK for streaming responses with React Server Components. Implemented a queue system for API calls and built a fallback grammar checker for offline use.`,
+    outcome: `Acquired 10,000+ users in the first month, with an average session time of 22 minutes. Featured in Product Hunt's top 5 products of the week.`,
+    image: "https://play-lh.googleusercontent.com/A9QsKXxVpDJ7olSd2_VapKaetwhPPRMc4tnSIMc5Bu70nBj4nqwQJ5EHRgUDtTx97G8",
+    screenshots: [
+      "/images/ai-writing-editor.jpg",
+      "/images/ai-writing-suggestions.jpg",
+    ],
+    tags: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS", "Vercel AI SDK"],
+    liveUrl: "https://writeai.demo.dev",
+    githubUrl: "https://github.com/alexrivera/ai-writing-assistant",
+    featured: true,
+    year: "2024",
+    role: "Full-Stack Developer",
+    duration: "3 months",
+  },
+  {
+    slug: "ecommerce-platform",
+    title: "Modern E-Commerce Platform",
+    shortDesc: "A full-featured e-commerce solution with inventory management, payment processing, and a stunning storefront.",
+    description: `A complete e-commerce platform built from scratch, featuring a customer-facing storefront, admin dashboard, inventory management, and integrated payment processing via Stripe. Supports multiple vendors and product variants.`,
+    challenge: `Building a multi-vendor marketplace with complex inventory rules, discount logic, and real-time stock updates across multiple storefronts required careful architecture planning.`,
+    solution: `Designed a microservices-inspired monorepo with shared types. Used Stripe Connect for multi-vendor payouts and implemented optimistic UI updates with server-side validation.`,
+    outcome: `Platform processes $50K+ in monthly transactions, supports 30+ vendors, and maintains sub-200ms page load times globally via edge caching.`,
+    image: "https://cdn.shopify.com/s/files/1/0817/7988/4088/articles/6DaWtQPc3lNh5d7l5wAi97.png?v=1712946186",
+    screenshots: [
+      "/images/ecommerce-product-page.jpg",
+      "/images/ecommerce-admin-dashboard.jpg",
+    ],
+    tags: ["Next.js", "Stripe", "PostgreSQL", "TypeScript", "Tailwind CSS", "Prisma"],
+    liveUrl: "https://shop.demo.dev",
+    githubUrl: "https://github.com/alexrivera/ecommerce-platform",
+    featured: true,
+    year: "2023",
+    role: "Full-Stack Developer",
+    duration: "6 months",
+  },
+  {
+    slug: "devops-monitoring",
+    title: "DevOps Monitoring Suite",
+    shortDesc: "A self-hosted infrastructure monitoring tool with alerting, log aggregation, and performance dashboards.",
+    description: `An open-source monitoring suite for development teams to track server health, application performance, and infrastructure costs. Features customizable alert rules, Slack/email notifications, and a beautiful real-time dashboard.`,
+    challenge: `Aggregating logs and metrics from diverse infrastructure sources (AWS, GCP, bare metal) into a unified view without vendor lock-in.`,
+    solution: `Built an agent-based collection system using Go for the data collectors and Next.js for the dashboard. Used ClickHouse for time-series data storage.`,
+    outcome: `500+ GitHub stars, adopted by 50+ engineering teams, and saved users an average of $2,000/month compared to commercial alternatives.`,
+    image: "https://axify.io/hubfs/blog-images/6e05c927-f38c-4aa8-8832-f06d35c2446e/personal-work-focus-dashboard.webp",
+    screenshots: [
+      "/images/devops-alerts-panel.jpg",
+      "/images/devops-metrics-charts.jpg",
+    ],
+    tags: ["Next.js", "Go", "ClickHouse", "Docker", "TypeScript", "WebSockets"],
+    liveUrl: "https://monitor.demo.dev",
+    githubUrl: "https://github.com/alexrivera/devops-monitoring",
+    featured: false,
+    year: "2023",
+    role: "Creator & Maintainer",
+    duration: "Ongoing",
+  },
+];
+
+export const testimonials = [
+  {
+    name: "Sarah Chen",
+    role: "CTO at TechFlow",
+    avatar: "https://imageio.forbes.com/specials-images/imageserve/5c928fa04bbe6f52641ab341/0x0.jpg?format=jpg&crop=2124,2123,x980,y756,safe&height=416&width=416&fit=bounds",
+    text: "Alex delivered our dashboard ahead of schedule with exceptional quality. The codebase is clean, well-documented, and our team loves working with it.",
+  },
+  {
+    name: "Marcus Johnson",
+    role: "Founder at LaunchPad",
+    avatar: "https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/2971718.png&w=350&h=254",
+    text: "Working with Alex was a game-changer for our startup. He understood our vision immediately and translated it into a product that exceeded our expectations.",
+  },
+  {
+    name: "Priya Patel",
+    role: "Product Manager at Nexus",
+    avatar: "https://ogc.emory.edu/_includes/images/system/priya-patel.jpeg.jpg",
+    text: "Alex's attention to detail and proactive communication made the entire development process smooth. The final product was polished and performant.",
+  },
+];
